@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"7e84063550","applicationID":"15405212","transactionName":"dV9fFUtYW1sASk5aWlhEVA9NGEdFDE4AWkw=","queueTime":0,"applicationTime":21,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueHoods</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="https://d229lpbd4mor23.cloudfront.net/favicon.ico" />
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="RiTnek3NP2yJNao+FCsOPY7dE+GGcDiRUstZXln6mhlq2YcnevLrIk6nZtNWv7a5Hla/C/NpavLNXcGoIp4KhA==" />
+    <link rel="stylesheet" media="screen" href="https://d229lpbd4mor23.cloudfront.net/assets/public-c1d98f9941845009deb67e59b8ad51ec.css" />
+    <script src="https://d229lpbd4mor23.cloudfront.net/assets/public-a9f6690eed093ef1c6d6db84b3f42850.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://d229lpbd4mor23.cloudfront.net/assets/favicon-2c7a14e8631c62432c87a4f1e5c94194.ico" />
+    
+  </head>
+
+  <body class="content privacy" id="BlueHoods_landing">
+    <header class="header black-font">
+
+  <div class="header__top-right-cta clearfix hidden-xs">
+    <div class="pull-right">
+      <!-- <span>Job Applicants</span> -->
+        <span class="login"><a href="users/sign_in.html" title="">Log In</a></li>
+    </div>
+  </div>
+
+  <div class="header__nav hidden-xs">
+    <div class="header__section-links pull-left">
+      <a class="header__logo-container--white" href="index.html"><img class="logo" src="" /></a>
+      <a class="header__logo-container--black" href="index.html"><img class="logo" src="" /></a>
+      <span class="separator"></span>
+      <span><a class="" href="explore_features.html">Features</a></span>
+      <span><a class=""href="/faq">FAQ</a></span>
+      <span><a class=""href="/resources">Resources</a></span>
+      <!-- <span><a class="" href="/resources">Resources</a></span> -->
+    </div>
+
+    <div class="header__contact-links pull-right">
+      <span class="phone-number hidden-md hidden-sm hidden-xs">
+        <i class="fa fa-phone fa-fw"></i> +91 98403-61729
+      </span>
+      <button class="request-access js-request-access" href="#" data-toggle="modal" data-target="#demo-modal">Request Demo</button>
+    </div>
+  </div>
+
+  <div class="header__nav--mobile visible-xs-block">
+    <div class="header__logo--mobile">
+      <a class="header__logo-container--white" href="index.html"><img class="logo" src="" /></a>
+      <a class="header__logo-container--black" href="index.html"><img class="logo" src="" /></a>
+    </div>
+
+    <div class="pull-right">
+      <span><a href="explore_features.html">Features</a></span>
+      <span><a href="privacy.html#" data-toggle="modal" data-target="#demo-modal">Request Demo</a></span>
+        <span class="login"><a href="users/sign_in.html" title="">Log In</a></li>
+    </div>
+  </div>
+
+  <!-- Request Access Modal -->
+  <div class="modal fade demo-modal" id="demo-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div class="modal-title">See BlueHoods in Action</div>
+          <div class="modal-subtitle">
+            Just fill out the form below! We'll be in touch shortly to set up a demo and talk your ear off about great automation for your hospital. You'll love it, we promise.
+          </div>
+        </div>
+        <div class="modal-body">
+          <form novalidate="novalidate" class="simple_form new_sales_lead" id="new_sales_lead" action="/sales_leads" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="KL39y2XNPnQmD1IXjlKRwYTttZErTHmJyBd3QxSZwGkEQJ2WUvLqOuGdnvrMxilFFGYZe15VK+pXge+1b/1Q9A==" />
+            
+
+            <div class="modal__input-container clearfix">
+              <div class="form-group string required sales_lead_first_name modal__horizontal-input pull-left"><input class="string required modal__first-input modal__input form-control" placeholder="First Name" type="text" name="sales_lead[first_name]" id="sales_lead_first_name" /></div>
+              <div class="form-group string required sales_lead_last_name modal__horizontal-input pull-right"><input class="string required modal__input form-control" placeholder="Last Name" type="text" name="sales_lead[last_name]" id="sales_lead_last_name" /></div>
+              <div class="form-group email required sales_lead_email"><input class="string email required modal__input form-control" placeholder="Work Email" type="email" name="sales_lead[email]" id="sales_lead_email" /></div>
+              <div class="form-group tel required sales_lead_phone_number"><input class="string tel required modal__input form-control" placeholder="Phone Number" type="tel" name="sales_lead[phone_number]" id="sales_lead_phone_number" /></div>
+              <div class="form-group string required sales_lead_company_name modal__horizontal-input pull-left"><input class="string required modal__input form-control" placeholder="Company Name" type="text" name="sales_lead[company_name]" id="sales_lead_company_name" /></div>
+              <div class="form-group string required sales_lead_workforce_size modal__horizontal-input pull-right">
+                <select class="modal__select form-control" name="sales_lead[workforce_size]" id="sales_lead_workforce_size"><option value="">Number of Employees</option>
+<option value="1 - 10">1 - 10</option>
+<option value="11 - 50">11 - 50</option>
+<option value="50 - 200">50 - 200</option>
+<option value="200 - 1000">200 - 1000</option>
+<option value="1000 +">1000 +</option></select>
+</div>            </div>
+
+            <div class="modal__submit-btn-container text-center">
+              <input type="submit" name="commit" value="Request Demo" class="btn modal__submit-btn" />
+            </div>
+</form>        </div>
+      </div>
+    </div>
+  </div>
+  <!-- //Request Access Modal -->
+</header>
+
+<script>
+  $('#demo-modal').on('shown.bs.modal', function (e) {
+    $('.modal__first-input').focus();
+  });
+
+  $('.js-request-access').click(function(e) {
+    window.location.hash = 'demo';
+  });
+</script>
+
+<script type="text/javascript">(function(o){var b="https://api.autopilothq.com/anywhere/",t="6a85b35c690e4645aaa02464e0a6615620d63ed32cb649b489bff52b349a8e52",a=window.AutopilotAnywhere={_runQueue:[],run:function(){this._runQueue.push(arguments);}},c=encodeURIComponent,s="SCRIPT",d=document,l=d.getElementsByTagName(s)[0],p="t="+c(d.title||"")+"&u="+c(d.location.href||"")+"&r="+c(d.referrer||""),j="text/javascript",z,y;if(!window.Autopilot) window.Autopilot=a;if(o.app) p="devmode=true&"+p;z=function(src,asy){var e=d.createElement(s);e.src=src;e.type=j;e.async=asy;l.parentNode.insertBefore(e,l);};if(!o.noaa){z(b+"aa/"+t+'?'+p,false)};y=function(){z(b+t+'?'+p,true);};if(window.attachEvent){window.attachEvent("onload",y);}else{window.addEventListener("load",y,false);}})({});</script>
+
+
+    <div class="main-wrapper">
+      <div class="public-header-bg">
+</div>
+
+<div class="container" style="margin-top: 160px;">
+  <div class="row">
+    <div class="col-md-12">
+
+      <h1>BlueHoods Privacy Policy</h1>
+
+      <hr class="invisible">
+      <h4>Effective Date: October 1, 2014</h4>
+      <h4>Last Modified Date: November 10, 2016</h4>
+
+      <hr>
+      <p> BlueHoods, Inc. (“BlueHoods,” “we,” “our,” or “us”) develops applicant tracking and workflow solutions for business Customers (“Customers”), which include tools and functionalities that can be integrated into Customers’ applicant tracking and workflow management systems (our “Service”).  BlueHoods understands that privacy is important to our users. This Privacy Policy explains:</p>
+      
+      <p> • How BlueHoods collects, uses, and shares information about visitors to our website and mobile products (“BlueHoods Sites”), and </p>
+      <p> • How BlueHoods collects, uses and shares information provided to us by or on behalf of our Customer as part of the applicant-tracking and workflow management Service. </p>
+      
+      <p> All capitalized terms that are not defined herein have the definitions given them in our Terms of Service (www.BlueHoods.com/tos). By using our Service, you agree to the terms of this Privacy Policy and our Terms of Service (www.BlueHoods.com/tos). </p>
+
+      <hr class="invisible">
+      <h4> 1.  WHAT INFORMATION DO WE COLLECT AND FOR WHAT PURPOSE? </h4>
+      <p> Information you provide to BlueHoods Sites. Visitors can browse some areas of our website without providing any personal information. However, certain interactions with us require personal information. For example, we may collect personal information such as a username and password, first and last name, phone number, email address, home address and billing information when you register for a User Account, use our Service, or if you correspond with us. We may also collect additional information you provide to us about your company or employer/workers, which we will consider to be personal information if it is linked to your identifying information. We may combine this information with data we collect from you through other methods, such as telephone conversations.</p>
+      
+      <p> Information that we collect through the BlueHoods Service:  In providing our service to our Customers, we collect, store, process and disclose personal information belonging to individualworkers who apply to or are employed by our Customers. Our Service is being provided as part of our Customer’s applicant tracking and workflow management systems and we are handling personal information solely on behalf of our Customers and in accordance with our agreements with our Customers. </p> 
+      
+      <p> If you are interacting with us in the applicant tracking and workflow management context through one of our Customers, please review the Customer’s privacy policy, terms of use, or employment policies to learn more about the Customer’s information practices, including its use of service providers like BlueHoods. </p>
+      
+      <p> For your information, here are some examples of how BlueHoods collects and uses information in the course of providing our Services to our Customers: </p>
+      
+      <p> • We collect information you provide to our Customer through the Service, such as when you submit a job application. Such information could include your name, photo, contact information, and other information typically found on a job application such as your job history, education level, age, specialized skill set, and other information;</p>
+      <p> • We collect information about you provided by our Customer, which may include your name, job title, contact information, email address, work schedule, and other information; </p>
+      <p> • We may permit you to provide additional contact and profile information, or to connect your account with your company address book or calendar, or to a third party service such as Facebook, Google or LinkedIn, in which case we may also collect information available through that third party service. Please always check your permissions on third party sites before connecting them to our Service; </p>
+      <p> •   We provide analytics and reporting functionalities to Customers to help manage and analyze work force capabilities and efficiencies; </p>
+      <p> • We may allow you to post messages or other content for other members of the Service and to communicate directly with others through the Service. </p>
+      
+      <p> The type of personal information we collect from or about you, and the ways in which such data is shared with other members of the Service will depend on the functionalities and guidelines established by our Customer pursuant to our Agreement with our Customer and the Customer’s settings on the Service.</p>
+      
+      <p> We use this information to operate, maintain, and provide to you the features of the Service. We may use this information to communicate with you, such as to send you email messages, or text messages with your consent, or to permit other users of the Service to send you such messages, and to follow up with you to offer information about our Service and your account. We may also send you Service-related emails or messages (e.g., account verification, transactional communications, change or updates to features of the Service, technical and security notices). For more information about your communication preferences, see “Your Choices Regarding Your Information” below.</p>
+
+      <p> We reserve the right, but have no obligation, to monitor any user-generated content you post on the Service. We reserve the right to remove any such information or material for any reason or no reason, including without limitation if in our sole opinion such information or material violates, or may violate, any applicable law or our Terms of Use Agreement, or to protect or defend our rights or property or those of any third party. We also reserve the right to remove information upon the request of any third party.</p>
+      
+      <hr class="invisible">
+      <h4> 2.  HOW WE USE COOKIES AND OTHER TRACKING TECHNOLOGY TO COLLECT INFORMATION</h4>
+      <p> We and our third party partners may automatically collect certain types of usage information when you visit our website or use our Service. For instance, when you visit our websites, we may send one or more cookies — a small text file containing a string of alphanumeric characters — to your computer that uniquely identifies your browser and lets us help you log in faster and enhance your navigation through the site. A cookie may also convey information to us about how you use the Service (e.g., the pages you view, the links you click, how frequently you access the Service, and other actions you take on the Service), and allow us to track your usage of the Service over time. We may collect log file information about your browser or mobile device each time you access the Service. Log file information may include anonymous information such as your web request, Internet Protocol (“IP”) address, browser type, information about your mobile device, referring / exit pages and URLs, number of clicks and how you interact with links on the Service, domain names, landing pages, pages viewed, and other such information. We may employ clear gifs (also known as web beacons) which are used to anonymously track the online usage patterns of our Users. In addition, we may also use clear gifs in HTML-based emails sent to our users to track which emails are opened and which links are clicked by recipients. The information allows for more accurate reporting and improvement of the Service. We may also collect analytics data, or use third-party analytics tools, to help us measure traffic and usage trends for the Service. These tools collect information sent by your browser or mobile device, including the pages you visit, your use of third party applications, and other information that assists us in analyzing and improving the Service. Although we do our best to honor the privacy preferences of our Users, we are not able to respond to Do Not Track signals from your browser at this time.</p>
+      
+      <p> When you access our Service by or through a mobile device, we may receive or collect and store a unique identification numbers associated with your device or our mobile application (including, for example, a UDID, Unique ID for Advertisers (“IDFA”), Google Ad ID, or Windows Advertising ID), mobile carrier, device type, model and manufacturer, mobile device operating system brand and model, phone number, and, depending on your mobile device settings, your geographical location data, including GPS coordinates (e.g. latitude and/or longitude) or similar information regarding the location of your mobile device.</p>
+      
+      <p> We may use the data collected through cookies, log file, device identifiers, location data and clear gifs information to: (a) remember information so that you will not have to re-enter it during your visit or the next time you visit the site; (b) provide custom, personalized content and information, including advertising; (c) provide and monitor the effectiveness of our Service; (d) monitor aggregate metrics such as total number of visitors, traffic, usage, and demographic patterns on our website and our Service; (e) diagnose or fix technology problems; and (f) otherwise to plan for and enhance our Service. </p>
+      
+      <p> Third party tracking and online advertising.  We may permit third party ad networks, social media companies, and other third party services to collect information about browsing behavior from visitors to our Service through cookies, social plug-ins, or other tracking technology. We may permit third party online advertising networks to collect information about your use of our websites over time so that they may play or display ads that may be relevant to your interests on our Service as well as on other websites or services. Typically, the information is collected through cookies or similar tracking technologies. The only way to completely “opt out” of the collection of any information through cookies or other tracking technology is to actively manage the settings on your browser or mobile device. Please refer to your browser’s or mobile device’s technical information for instructions on how to delete and disable cookies, and other tracking/recording tools. (To learn more about cookies, clear gifs/web beacons and related technologies and how you may opt-out of some of this tracking, you may wish to visit http://www.allaboutcookies.org and/or the Network Advertising Initiative’s online resources, at http://www.networkadvertising.org). Depending on your mobile device, you may not be able to control tracking technologies through settings.</p>
+      
+      <hr class="invisible">
+      <h4>3.  SHARING OF YOUR INFORMATION</h4>
+      <p> We may share your personal information in the instances described below. For further information on your choices regarding your information, see the “Your Choices About Your Information” section below.
+      Remember, our Service allows you to connect and interact with others. Your profile information, including your name, photo, and other personal information, may be available publicly to other members of the Service by default. This information may be available to the public and may be searchable by search engines which may display certain parts of your personal information publicly.We may share your personal information with:</p>
+      
+      <p> • Other parties you chose to share data with through our Service. This includes your employer or potential employer and any other company or individual you engage with through our Service; </p>
+      <p> • Other companies owned by or under common ownership as BlueHoods. These companies will use your personal information in the same way as we can under this policy;</p>
+      <p> • Third parties for marketing purposes;</p>
+      <p> • Third-party vendors and other service providers that perform services on our behalf, in order to carry out their work for us, which may include billing, payments, service fulfillment, web hosting or providing analytic services. We provide only as much information as is reasonably necessary to perform the Services on our behalf; </p>
+      <p> • Other parties in connection with a company transaction, such as a merger, sale of company assets or shares, reorganization, financing, change of control or acquisition of all or a portion of our business by another company or third party or in the event of a bankruptcy or related or similar proceedings; and</p>
+      <p> • Third parties as required by law or subpoena or if we reasonably believe that such action is necessary to (a) comply with the law and the reasonable requests of law enforcement; (b) to enforce our Terms of Service (www.BlueHoods.com/tos) or to protect the security or integrity of our Service; and/or (c) to exercise or protect the rights, property, or personal safety of BlueHoods, our Users, or others.</p>
+      
+      <p> As described above, any personal information that we receive or have access to in the course of providing our Service to a Customer, is shared by BlueHoods solely on behalf of the Customer, and in accordance with our agreements with the Customer, unless you agree to participate in additional services offered by BlueHoods. Therefore, if you are interacting in the applicant tracking and workflow performance context with one of our Customers, please review the Customer's privacy policy, terms of use, employment policies and procedures or other notices, and the Customer’s settings on the Service to learn more about the Customer's information practices, including the use of service providers like BlueHoods. </p>
+      
+      <p> To the extent that we provide forums, blogs or bulletins that allow you to post user-generated content, such content may become available to the public and to other members of the Service. If you remove information that you posted to the Service, copies may remain viewable in cached and archived pages of the Service, or if other users have copied or saved that information. </p>
+      
+      <p> We may also aggregate or otherwise strip data of all personally identifying characteristics and may share that aggregated or anonymized data with third parties.</p>
+      
+      <hr class="invisible">
+      <h4>4.  YOUR CHOICES ABOUT YOUR INFORMATION</h4>
+      <p> How to control your communications preferences: You can stop receiving promotional email communications from us by clicking on the “unsubscribe link” provided in such communications. We make every effort to promptly process all unsubscribe requests. You may not opt out of Service-related communications (e.g., account verification, transactional communications, changes/updates to features of the Service, technical and security notices). Please note that other users, such as your employer or potential employer, may contact you through or outside of the Service and BlueHoods may not be able to control your preferences for those types of communications. </p>
+      
+      <p> Modifying or deleting your information. We will retain your information for as long as your account is active or as needed to provide you Services. You may view and modify your personal information through your account settings. We may not be able to modify or delete your information in all circumstances. For example, information we collect in the course of providing the Service is shared with our Customer and we do not control access to nor delete that information once it has been shared with our Customer. If you have any questions about reviewing, modifying or deleting your account information, contact us at clients@BlueHoods.com. In some cases, we may not be able to remove your personally identifiable information, in which case we will let you know if we are unable to do so and why. You can also contact the Customer directly to learn more about how the Customer uses and stores your personal information.</p>
+
+      <hr class="invisible">
+      <h4>5.  HOW WE STORE AND PROTECT YOUR INFORMATION</h4>
+      <p> Storage and processing: Your information collected through the Service may be stored and processed in the United States and in any other country in which BlueHoods or its subsidiaries, affiliates or service providers maintain facilities. If you are located in the European Union or other regions with laws governing data collection and use that may differ from U.S. law, please note that we will transfer information, including personal information, to a country and jurisdiction that does not have the same data protection laws as your jurisdiction, and you consent to the transfer of information to the U.S. or any other country in which BlueHoods or its parent, subsidiaries, affiliates or service providers maintain facilities and the use and disclosure of information about you as described in this Privacy Policy. If you are a Customer with employees, team members or other end users located in the European Union, you confirm that you have the right to consent to the transfer of end user data to our Service and to facilities located in the United States or in any other country in which BlueHoods or its service providers maintain facilities. </p>
+      
+      <p> Keeping your information safe: BlueHoods cares about the security of your information, and uses commercially reasonable physical, administrative, and technological safeguards to preserve the integrity and security of all information collected through the Service. However, no security system is impenetrable and we cannot guarantee the security of our systems 100%. In the event that any information under our control is compromised as a result of a breach of security, BlueHoods will investigate the situation and where appropriate, notify those individuals whose information may have been compromised and take other steps, in accordance with any applicable laws and regulations.</p>
+      
+      <hr class="invisible">
+      <h4>6.  CHILDREN’S PRIVACY</h4>
+      <p> BlueHoods does not knowingly collect or solicit any information from anyone under the age of 13 or knowingly allow such persons to register as Users. In the event that we learn that we have collected personal information from a child under age 13, we will delete that information as quickly as possible. If you believe that we might have any information from a child under 13, please contact us at clients@BlueHoods.com</p>
+      
+      <hr class="invisible">
+      <h4>7.  LINKS TO OTHER WEB SITES AND SERVICES</h4>
+      <p> Our Service may integrate with or contain links to other third party sites and services. We are not responsible for the practices employed by third party websites or services embedded in, linked to, linked from, or connected with the Service and your interactions with any third-party website or service are subject to that third party’s own rules and policies.</p>
+      
+      <hr class="invisible">
+      <h4>8.  HOW TO CONTACT US</h4>
+      <p> If you have any questions about this Privacy Policy or the Service, please contact us at clients@BlueHoods.com.</p>
+      
+      <hr class="invisible">
+      <h4>9.  CHANGES TO OUR PRIVACY POLICY</h4>
+      <p> BlueHoods may modify or update this Privacy Policy from time to time to reflect the changes in our business and practices, and so you should review this page periodically. When we change the policy we will update the ‘last modified’ date at the top of this page.</p>
+
+
+
+      <hr class="invisible">
+    
+    </div>
+  </div>
+</div>
+    </div>
+
+    <footer>
+  <div class="container">
+    <div class="row footer-row">
+      <div class="col-sm-2">
+        <div class="copyright"></div>
+      </div>
+
+      <div class="col-sm-9 col-sm-offset-1">
+        <div class="row navs">
+          <nav class="col-sm-4 col-xs-12 footer__menus">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="careers.html">Careers</a></li>
+              <li><a href="https://www.crunchbase.com/organization/BlueHoods">Investors</a></li>
+              <li><a href="tos.html">Terms of Service</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+          </nav>
+          <nav class="col-sm-4 col-xs-12 footer__menus">
+            <h3>Community</h3>
+            <ul>
+              <li><a href="careers.html">About</a></li>
+              <li><a href="mailto:hello@BlueHoods.co">Support</a></li>
+              <li><a href="mailto:hello@BlueHoods.co">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="clearfix visible-xs-block"></div>
+          <nav class="col-sm-4 col-xs-12 footer__menus">
+            <h3>Follow</h3>
+            <ul>
+              <li><a href="https://www.facebook.com/BlueHoods" target="_blank">Facebook</a></li>
+              <li><a href="https://www.twitter.com/BlueHoods" target="_blank">Twitter</a></li>
+              <li><a href="https://www.linkedin.com/company/BlueHoods" target="_blank">LinkedIn</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Facebook Pixel Code (Track Registrations for OBIQ) -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '262852453909244');
+    fbq('track', "PageView");
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=262852453909244&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- Segment Analytics -->
+  <script type="text/javascript">
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+    analytics.load("t6bDYay8etM4RVwY9Fi6mdOSRhLElktc");
+    analytics.page()
+    }}();
+  </script>
+
+  <!-- / Segment Analytics -->
+
+  </body>
+</html>
